@@ -1,3 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
+
+part 'item.g.dart';
+@JsonSerializable()
 class Item {
   String id;
   String name;
@@ -6,7 +11,7 @@ class Item {
 
   Item() {}
 
-  Item.create(String id, String name, int quantity, double amount) {
+  Item.create({String id, String name, int quantity, double amount}) {
     this.id = id;
     this.name = name;
     this.quantity = quantity;
@@ -44,4 +49,8 @@ class Item {
   void setAmount(double amount) {
     this.amount = amount;
   }
+
+  factory Item.fromJson(Map<String, dynamic> json) => _$ItemFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ItemToJson(this);
 }

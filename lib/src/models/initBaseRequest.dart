@@ -1,6 +1,9 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:payhere_flutter/src/models/customer.dart';
 import 'package:payhere_flutter/src/models/item.dart';
 
+part 'initBaseRequest.g.dart';
+@JsonSerializable(explicitToJson: true)
 class InitBaseRequest {
   String merchantId;
   String merchantSecret;
@@ -127,4 +130,10 @@ class InitBaseRequest {
   void setCurrency(String currency) {
     this.currency = currency;
   }
+
+
+  factory InitBaseRequest.fromJson(Map<String, dynamic> json) =>
+      _$InitBaseRequestFromJson(json);
+
+  Map<String, dynamic> toJson() => _$InitBaseRequestToJson(this);
 }
