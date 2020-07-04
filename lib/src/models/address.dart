@@ -1,5 +1,3 @@
-
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'address.g.dart';
@@ -10,7 +8,7 @@ class Address {
   String city;
   String country;
 
-  Address() ;
+  Address();
 
   String getAddress() {
     return this.address;

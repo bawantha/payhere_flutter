@@ -29,7 +29,7 @@ class PaymentDetails {
   String _method;
   bool _auto;
 
-  PaymentDetails() ;
+  PaymentDetails();
 
   String getMerchantId() {
     return this._merchantId;
@@ -135,7 +135,7 @@ class PaymentDetails {
     this._itemsDescription = itemsDescription;
   }
 
- Map<String, String> getItemsMap() {
+  Map<String, String> getItemsMap() {
     return this._itemsMap;
   }
 

@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-
 part 'item.g.dart';
+
 @JsonSerializable()
 class Item {
   String id;
@@ -9,7 +9,7 @@ class Item {
   int quantity;
   double amount;
 
-  Item() ;
+  Item();
 
   Item.create({String id, String name, int quantity, double amount}) {
     this.id = id;

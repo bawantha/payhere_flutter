@@ -6,13 +6,13 @@
    <img src="https://raw.githubusercontent.com/bawantha/payhere_flutter/master/screenshots/2.png" width="180px" height="auto" hspace="20"/>
     <img src="https://raw.githubusercontent.com/bawantha/payhere_flutter/master/screenshots/3.png" width="180px" height="auto" hspace="20"/>
 </p>
-A Flutter plugin for making payments via Payhere Payment Gateway.
+A Flutter plugin for making payments via Payhere Payment Gateway
 
 #  💻Installation
 
 Add  this `dependencies` in your app's `pubspec.yml`
 
-    payhere_flutter: ^0.0.1
+    payhere_flutter: latest
 
 # 💰 Making Payments
 
@@ -22,7 +22,7 @@ This plugin mimics the original [payhere android sdk](https://support.payhere.lk
 import 'package:payhere_flutter/payhere_flutter.dart';
 ```
 ***One-time Payment Request***
-```dart
+```
 InitRequest req = new InitRequest();
 //Required Params
 req.setMerchantId("1210XXX");       // Your Merchant PayHere ID
@@ -48,7 +48,7 @@ req.getCustomer().getDeliveryAddress().setCountry("Sri Lanka");
 req.getItems().add(new Item(null, "Door bell wireless", 1, 1000.0));
 ```
 call 	`SANDBOX` or `LIVE` end points with `InitRequest`
-```dart
+```
 RaisedButton(  
   onPressed: () async {  
   // SANDBOX 
@@ -78,5 +78,3 @@ The project is open to public contribution. Please feel very free to contribute.
 ## 😇 Is this useful?
 
 please don't forget to give a little start ⭐ from [here](https://github.com/bawantha/payhere_flutter) and give a 👍 for this.  
-
-

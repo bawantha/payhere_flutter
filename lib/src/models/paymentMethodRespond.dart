@@ -3,7 +3,7 @@ class PaymentMethodResponse {
   String msg;
   Map<String, Data> data;
 
-  PaymentMethodResponse() ;
+  PaymentMethodResponse();
 
   int getStatus() {
     return this.status;
@@ -34,7 +34,7 @@ class Size {
   int width;
   int height;
 
-  Size() ;
+  Size();
 
   int getWidth() {
     return this.width;
@@ -57,7 +57,7 @@ class Data {
   String imageUrl;
   Size viewSize;
 
-  Data() ;
+  Data();
 
   String getImageUrl() {
     return this.imageUrl;

@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:payhere_flutter/src/models/address.dart';
 
 part 'customer.g.dart';
+
 @JsonSerializable(explicitToJson: true)
 class Customer {
   String firstName;
@@ -12,7 +13,7 @@ class Customer {
   @JsonKey(includeIfNull: false)
   Address deliveryAddress;
 
-  Customer() ;
+  Customer();
 
   String getFirstName() {
     return this.firstName;
@@ -67,9 +68,6 @@ class Customer {
   void setDeliveryAddress(Address deliveryAddress) {
     this.deliveryAddress = deliveryAddress;
   }
-
-
-
 
   factory Customer.fromJson(Map<String, dynamic> json) =>
       _$CustomerFromJson(json);
