@@ -1,3 +1,13 @@
+
+##0.0.2
+
+* Clean plugin 
+* Update readme.md
+* Change Package description
+
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+
+* One time payment [Android]
+ 
