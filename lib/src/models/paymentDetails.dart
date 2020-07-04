@@ -29,7 +29,7 @@ class PaymentDetails {
   String _method;
   bool _auto;
 
-  PaymentDetails() {}
+  PaymentDetails() ;
 
   String getMerchantId() {
     return this._merchantId;

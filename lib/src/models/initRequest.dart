@@ -12,7 +12,7 @@ class InitRequest extends InitBaseRequest {
   String duration;
   double startupFee;
 
-  InitRequest() {}
+  InitRequest() ;
 
   double getAmount() {
     return this.amount;

@@ -3,7 +3,7 @@ class PaymentInitResult {
   String msg;
   Data data;
 
-  PaymentInitResult() {}
+  PaymentInitResult() ;
 
   int getStatus() {
     return this.status;
@@ -36,7 +36,7 @@ class Data {
   List<String> paymentMethods;
   Redirection redirection;
 
-  Data() {}
+  Data() ;
 
   Order getOrder() {
     return this.order;
@@ -75,7 +75,7 @@ class Redirection {
   String redirectType;
   String url;
 
-  Redirection() {}
+  Redirection() ;
 
   String getRedirectType() {
     return this.redirectType;
@@ -98,7 +98,7 @@ class Business {
   String name;
   String logo;
 
-  Business() {}
+  Business() ;
 
   String getName() {
     return this.name;
@@ -126,7 +126,7 @@ class Order {
   String shortDescription;
   String longDescription;
 
-  Order() {}
+  Order() ;
 
   String getOrderKey() {
     return this.orderKey;

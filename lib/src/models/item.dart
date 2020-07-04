@@ -9,7 +9,7 @@ class Item {
   int quantity;
   double amount;
 
-  Item() {}
+  Item() ;
 
   Item.create({String id, String name, int quantity, double amount}) {
     this.id = id;

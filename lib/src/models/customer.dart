@@ -12,7 +12,7 @@ class Customer {
   @JsonKey(includeIfNull: false)
   Address deliveryAddress;
 
-  Customer() {}
+  Customer() ;
 
   String getFirstName() {
     return this.firstName;

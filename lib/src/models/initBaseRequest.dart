@@ -19,7 +19,7 @@ class InitBaseRequest {
   List<Item> items;
   String currency;
 
-  InitBaseRequest() {}
+  InitBaseRequest() ;
 
   String getMerchantId() {
     return this.merchantId;

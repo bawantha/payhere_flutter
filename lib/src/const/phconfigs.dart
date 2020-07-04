@@ -1,15 +1,15 @@
 class PHConfigs {
-  static final String LIVE_URL = "https://www.payhere.lk/pay/";
-  static final String SANDBOX_URL = "https://sandbox.payhere.lk/pay/";
-  static final String CHECKOUT = "checkout";
-  static final String STATUS = "order_status";
-  String _BASE_URL = null;
+  static final String liveUrl = "https://www.payhere.lk/pay/";
+  static final String sandBoxUrl = "https://sandbox.payhere.lk/pay/";
+  static final String checkout = "checkout";
+  static final String status = "order_status";
+  String _base_url = null;
 
   void setBaseUrl(String url) {
-    _BASE_URL = url;
+    _base_url = url;
   }
 
   String getBaseUrl() {
-    return _BASE_URL;
+    return _base_url;
   }
 }

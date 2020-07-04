@@ -3,7 +3,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:payhere_flutter/src/const/phconfigs.dart';
 import 'package:payhere_flutter/src/models/initRequest.dart';
 import 'package:payhere_flutter/src/models/phresponse.dart';
 

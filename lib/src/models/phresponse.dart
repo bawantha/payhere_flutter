@@ -1,6 +1,7 @@
 import 'dart:convert';
 
-PhResponse phResponseFromJson(String str) => PhResponse.fromJson(json.decode(str));
+PhResponse phResponseFromJson(String str) =>
+    PhResponse.fromJson(json.decode(str));
 
 String phResponseToJson(PhResponse data) => json.encode(data.toJson());
 
@@ -16,16 +17,16 @@ class PhResponse {
   final int status;
 
   factory PhResponse.fromJson(Map<String, dynamic> json) => PhResponse(
-    data: Data.fromJson(json["data"]),
-    message: json["message"],
-    status: json["status"],
-  );
+        data: Data.fromJson(json["data"]),
+        message: json["message"],
+        status: json["status"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "data": data.toJson(),
-    "message": message,
-    "status": status,
-  };
+        "data": data.toJson(),
+        "message": message,
+        "status": status,
+      };
 }
 
 class Data {
@@ -46,20 +47,20 @@ class Data {
   final int status;
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
-    currency: json["currency"],
-    message: json["message"],
-    paymentNo: json["paymentNo"],
-    price: json["price"],
-    sign: json["sign"],
-    status: json["status"],
-  );
+        currency: json["currency"],
+        message: json["message"],
+        paymentNo: json["paymentNo"],
+        price: json["price"],
+        sign: json["sign"],
+        status: json["status"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "currency": currency,
-    "message": message,
-    "paymentNo": paymentNo,
-    "price": price,
-    "sign": sign,
-    "status": status,
-  };
+        "currency": currency,
+        "message": message,
+        "paymentNo": paymentNo,
+        "price": price,
+        "sign": sign,
+        "status": status,
+      };
 }

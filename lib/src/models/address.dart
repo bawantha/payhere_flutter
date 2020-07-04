@@ -10,7 +10,7 @@ class Address {
   String city;
   String country;
 
-  Address() {}
+  Address() ;
 
   String getAddress() {
     return this.address;

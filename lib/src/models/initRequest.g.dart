@@ -6,7 +6,6 @@ part of 'initRequest.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-
 InitRequest _$InitRequestFromJson(Map<String, dynamic> json) {
   return InitRequest()
     ..merchantId = json['merchantId'] as String
