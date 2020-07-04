@@ -22,7 +22,7 @@ class PayhereFlutter {
   }
 
   static Future<PhResponse> oneTimePaymentSandbox(
-      {@required InitRequest request, @required PHConfigs configs}) async {
+      {@required InitRequest request}) async {
     Map<String, dynamic> map = request.toJson();
     Map<dynamic, dynamic> response = Map();
     response = await _channel.invokeMethod('onTimePaymentDemo', map);
@@ -32,7 +32,7 @@ class PayhereFlutter {
   }
 
   static Future<PhResponse> oneTimePaymentReal(
-      {@required InitRequest request, @required PHConfigs configs}) async {
+      {@required InitRequest request}) async {
     Map<String, dynamic> map = request.toJson();
     Map<dynamic, dynamic> response = Map();
     response = await _channel.invokeMethod('onTimePaymentReal', map);
