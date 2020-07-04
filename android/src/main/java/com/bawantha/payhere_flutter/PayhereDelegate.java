@@ -29,7 +29,7 @@ public class PayhereDelegate implements ActivityResultListener {
     }
 
 
-    void oneTimePayment(Map<String, Object> arguments, Result result) {
+    void onTimePaymentDemo(Map<String, Object> arguments, Result result) {
         this.pendingResult = result;
 
         String jsonString = gson.toJson(arguments);
@@ -37,6 +37,16 @@ public class PayhereDelegate implements ActivityResultListener {
         Intent intent = new Intent(activity, PHMainActivity.class);
         intent.putExtra(PHConstants.INTENT_EXTRA_DATA, req);
         PHConfigs.setBaseUrl(PHConfigs.SANDBOX_URL);
+        activity.startActivityForResult(intent, 456); //unique request ID like private final static int PAYHERE_REQUEST = 11010;
+    }
+
+    void onTimePaymentReal(Map<String, Object> arguments, Result result) {
+        this.pendingResult = result;
+        String jsonString = gson.toJson(arguments);
+        InitRequest req = gson.fromJson(jsonString, InitRequest.class);
+        Intent intent = new Intent(activity, PHMainActivity.class);
+        intent.putExtra(PHConstants.INTENT_EXTRA_DATA, req);
+        PHConfigs.setBaseUrl(PHConfigs.LIVE_URL);
         activity.startActivityForResult(intent, 456); //unique request ID like private final static int PAYHERE_REQUEST = 11010;
     }
 

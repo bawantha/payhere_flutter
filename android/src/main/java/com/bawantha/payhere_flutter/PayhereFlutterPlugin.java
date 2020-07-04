@@ -60,8 +60,12 @@ public class PayhereFlutterPlugin implements FlutterPlugin, MethodCallHandler, A
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     switch (call.method) {
-      case "onTimePayment":
-        payhereDelegate.oneTimePayment((Map<String, Object>) call.arguments, result);
+      case "onTimePaymentDemo":
+        payhereDelegate.onTimePaymentDemo((Map<String, Object>) call.arguments, result);
+        break;
+
+      case "onTimePaymentReal" :
+        payhereDelegate.onTimePaymentReal((Map<String, Object>) call.arguments, result);
         break;
       default:
         result.notImplemented();
