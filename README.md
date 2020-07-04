@@ -6,7 +6,7 @@
    <img src="https://raw.githubusercontent.com/bawantha/payhere_flutter/master/screenshots/2.png" width="180px" height="auto" hspace="20"/>
     <img src="https://raw.githubusercontent.com/bawantha/payhere_flutter/master/screenshots/3.png" width="180px" height="auto" hspace="20"/>
 </p>
-A Flutter plugin for making payments via Paystack Payment Gateway. Fully supports Android and iOS.
+A Flutter plugin for making payments via Payhere Payment Gateway
 
 #  💻Installation
 
