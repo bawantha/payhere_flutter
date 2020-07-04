@@ -1,13 +1,33 @@
 import 'dart:async';
+import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:payhere_flutter/src/const/phconfigs.dart';
+import 'package:payhere_flutter/src/models/initRequest.dart';
+import 'package:payhere_flutter/src/models/phresponse.dart';
+
+export 'package:payhere_flutter/src/const/phconfigs.dart';
+export 'package:payhere_flutter/src/const/phconstants.dart';
+export 'package:payhere_flutter/src/models/initRequest.dart';
+export 'package:payhere_flutter/src/models/item.dart';
+export 'package:payhere_flutter/src/models/phresponse.dart';
 
 class PayhereFlutter {
-  static const MethodChannel _channel =
-      const MethodChannel('payhere_flutter');
+  static const MethodChannel _channel = const MethodChannel('payhere_flutter');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
+  }
+
+  static Future<PhResponse> onetimepayment(
+      {@required InitRequest request, @required PHConfigs configs}) async {
+    Map<String, dynamic> map = request.toJson();
+    Map<dynamic, dynamic> response = Map();
+    response = await _channel.invokeMethod('onTimePayment', map);
+    PhResponse phResponse =
+        PhResponse.fromJson(json.decode(response['response']));
+    return phResponse;
   }
 }
