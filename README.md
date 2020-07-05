@@ -59,6 +59,22 @@ RaisedButton(
 ```
 `PhResponse` is identical to `PHResponse` in Android SDK 
 
+`PhResponse`
+| type |name  |description
+|--|--|--|
+|  `Data`| `data` |includes information about transaction
+|`String`|`message` | brief about transaction
+|`int` | `status` | Transaction status
+
+### Status
+|status|code  |
+|--|--|
+| SUCCESS |  1|
+|ERROR_UNKNOWN|-1
+|ERROR_DATA| -2
+|ERROR_VALIDATION| -3
+|ERROR_PAYMENT | -5
+
 
 
 you can find example code in [here](https://github.com/bawantha/payhere_flutter/tree/master/example)
