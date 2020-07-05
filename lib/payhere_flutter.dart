@@ -27,7 +27,7 @@ class PayhereFlutter {
     PhResponse phResponse = await _channel
         .invokeMethod('onTimePaymentDemo', map)
         .then(
-            (value) => PhResponse.fromJson(json.decode(response['response'])));
+            (value) => PhResponse.fromJson(json.decode(value['response'])));
     return phResponse;
   }
 
@@ -37,7 +37,7 @@ class PayhereFlutter {
     Map<dynamic, dynamic> response = Map();
     PhResponse phResponse = await _channel.invokeMethod(
         'onTimePaymentReal', map).then((value) =>
-        PhResponse.fromJson(json.decode(response['response'])));
+        PhResponse.fromJson(json.decode(value['response'])));
     return phResponse;
   }
 }
