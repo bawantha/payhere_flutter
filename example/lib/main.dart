@@ -23,10 +23,9 @@ class _MyAppState extends State<MyApp> {
   }
 
   initPlatformState() {
-    // add your merchant ID and Merchant Secret
-    req.setMerchantId("1214213"); // Your Merchant PayHere ID
+    req.setMerchantId("XXXX"); // Your Merchant PayHere ID
     req.setMerchantSecret(
-        "4vRyia7Bbrn4Z8inKJfYnf8LLoQq4WWEG4aF3eBOvZvl");  // Your Merchant secret (Add your app at Settings > Domains & Credentials, to get this))
+        "APPKEY");  // Your Merchant secret (Add your app at Settings > Domains & Credentials, to get this))
     req.setCurrency("LKR"); // Currency code LKR/USD/GBP/EUR/AUD
     req.setAmount(1000.00); // Final Amount to be charged
     req.setOrderId("230000123"); // Unique Reference ID
