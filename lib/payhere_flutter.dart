@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:payhere_flutter/src/models/initRequest.dart';
 import 'package:payhere_flutter/src/models/phresponse.dart';
-
 export 'package:payhere_flutter/src/const/phconfigs.dart';
 export 'package:payhere_flutter/src/const/phconstants.dart';
 export 'package:payhere_flutter/src/models/initRequest.dart';
@@ -22,22 +21,32 @@ class PayhereFlutter {
 
   static Future<PhResponse> oneTimePaymentSandbox(
       {@required InitRequest request}) async {
-    Map<String, dynamic> map = request.toJson();
-    Map<dynamic, dynamic> response = Map();
-    PhResponse phResponse = await _channel
-        .invokeMethod('onTimePaymentDemo', map)
-        .then(
-            (value) => PhResponse.fromJson(json.decode(value['response'])));
-    return phResponse;
+    try {
+      Map<String, dynamic> map = request.toJson();
+      PhResponse phResponse = await _channel
+          .invokeMethod('onTimePaymentDemo', map)
+          .then(
+              (value) => PhResponse.fromJson(json.decode(value['response'])));
+      return phResponse;
+    } catch (e) {
+      debugPrint(e.toString());
+      return null;
+    }
   }
 
   static Future<PhResponse> oneTimePaymentReal(
       {@required InitRequest request}) async {
-    Map<String, dynamic> map = request.toJson();
-    Map<dynamic, dynamic> response = Map();
-    PhResponse phResponse = await _channel.invokeMethod(
-        'onTimePaymentReal', map).then((value) =>
-        PhResponse.fromJson(json.decode(value['response'])));
-    return phResponse;
+    try {
+      Map<String, dynamic> map = request.toJson();
+      PhResponse phResponse = await _channel
+          .invokeMethod('onTimePaymentReal', map)
+          .then(
+              (value) => PhResponse.fromJson(json.decode(value['response'])));
+      return phResponse;
+    } catch (e) {
+      debugPrint(e.toString());
+      return null;
+    }
   }
+
 }
