@@ -86,7 +86,7 @@ The project is open to public contribution. Please feel very free to contribute.
 	 ```
  <application
 	android:name="io.flutter.app.FlutterApplication"  
-	android:label="colomboadnetwork"  
+	android:label="appname"  
 	android:icon="@mipmap/ic_launcher"  
 	tools:replace="android:label"> // add this
 	```
