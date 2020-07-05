@@ -74,7 +74,6 @@ public class PayhereFlutterPlugin implements FlutterPlugin, MethodCallHandler, A
 
   @Override
   public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
-    channel.setMethodCallHandler(null);
   }
 
   @Override
@@ -99,7 +98,5 @@ public class PayhereFlutterPlugin implements FlutterPlugin, MethodCallHandler, A
     pluginBinding.removeActivityResultListener(payhereDelegate);
     pluginBinding = null;
   }
-
-
 
 }

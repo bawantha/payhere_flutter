@@ -65,4 +65,5 @@ public class PayhereDelegate implements ActivityResultListener {
             return true;
         }
     }
+
 }
