@@ -1,7 +1,17 @@
+##0.0.7
+ *model updates
+ *bug fix
+ 
+## 0.0.6
+ *bug fix
+## 0.0.5
+ *bug fix
+## 0.0.4
+ *bug fix
+ *update readme.md
+
 ##0.0.3
 *Change package description
-
-
 
 ##0.0.2
 

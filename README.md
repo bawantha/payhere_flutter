@@ -12,7 +12,7 @@ A Flutter plugin for making payments via Payhere Payment Gateway
 
 Add  this `dependencies` in your app's `pubspec.yml`
 
-    payhere_flutter: ^0.0.4
+    payhere_flutter: ^0.0.7
 
 # 💰 Making Payments
 
@@ -58,6 +58,8 @@ RaisedButton(
 ),
 ```
 `PhResponse` is identical to `PHResponse` in Android SDK 
+
+
 
 you can find example code in [here](https://github.com/bawantha/payhere_flutter/tree/master/example)
 
