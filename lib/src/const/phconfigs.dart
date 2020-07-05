@@ -3,13 +3,13 @@ class PHConfigs {
   static final String sandBoxUrl = "https://sandbox.payhere.lk/pay/";
   static final String checkout = "checkout";
   static final String status = "order_status";
-  String _base_url = null;
+  String _baseUrl = sandBoxUrl;
 
   void setBaseUrl(String url) {
-    _base_url = url;
+    _baseUrl = url;
   }
 
   String getBaseUrl() {
-    return _base_url;
+    return _baseUrl;
   }
 }
