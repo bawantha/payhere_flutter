@@ -1,66 +1,19 @@
-import 'dart:convert';
+import 'package:json_annotation/json_annotation.dart';
+import 'package:payhere_flutter/src/models/data.dart';
 
-PhResponse phResponseFromJson(String str) =>
-    PhResponse.fromJson(json.decode(str));
+part 'phresponse.g.dart';
 
-String phResponseToJson(PhResponse data) => json.encode(data.toJson());
-
+@JsonSerializable(explicitToJson: true)
 class PhResponse {
-  PhResponse({
-    this.data,
-    this.message,
-    this.status,
-  });
+  PhResponse();
 
-  final Data data;
-  final String message;
-  final int status;
+  @JsonKey(includeIfNull: false)
+  Data data;
+  String message;
+  int status;
 
-  factory PhResponse.fromJson(Map<String, dynamic> json) => PhResponse(
-        data: Data.fromJson(json["data"]),
-        message: json["message"],
-        status: json["status"],
-      );
+  factory PhResponse.fromJson(Map<String, dynamic> json) =>
+      _$PhResponseFromJson(json);
 
-  Map<String, dynamic> toJson() => {
-        "data": data.toJson(),
-        "message": message,
-        "status": status,
-      };
-}
-
-class Data {
-  Data({
-    this.currency,
-    this.message,
-    this.paymentNo,
-    this.price,
-    this.sign,
-    this.status,
-  });
-
-  final String currency;
-  final String message;
-  final int paymentNo;
-  final int price;
-  final String sign;
-  final int status;
-
-  factory Data.fromJson(Map<String, dynamic> json) => Data(
-        currency: json["currency"],
-        message: json["message"],
-        paymentNo: json["paymentNo"],
-        price: json["price"],
-        sign: json["sign"],
-        status: json["status"],
-      );
-
-  Map<String, dynamic> toJson() => {
-        "currency": currency,
-        "message": message,
-        "paymentNo": paymentNo,
-        "price": price,
-        "sign": sign,
-        "status": status,
-      };
+  Map<String, dynamic> toJson() => _$PhResponseToJson(this);
 }
