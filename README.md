@@ -12,7 +12,7 @@ A Flutter plugin for making payments via Payhere Payment Gateway
 
 Add  this `dependencies` in your app's `pubspec.yml`
 
-    payhere_flutter: latest
+    payhere_flutter: ^0.0.4
 
 # 💰 Making Payments
 
@@ -74,6 +74,20 @@ you can find example code in [here](https://github.com/bawantha/payhere_flutter/
 ## ✏️ Contributing, 😞 Issues and 🐛 Bug Reports
 
 The project is open to public contribution. Please feel very free to contribute. Experienced an issue or want to report a bug? Please, [report it here](https://github.com/bawantha/payhere_flutter/issues). Remember to be as descriptive as possible.
+
+##  🚨  Issues /Bugs
+
+ - 0.0.3
+  **Android**
+	 [Manifest merger failed error](https://stackoverflow.com/questions/28095703/manifest-merger-failed-error)	 
+	 add Page maker rule for `AndroidManifest.xml`
+	 ```
+ <application
+	android:name="io.flutter.app.FlutterApplication"  
+	android:label="colomboadnetwork"  
+	android:icon="@mipmap/ic_launcher"  
+	tools:replace="android:label"> // add this
+	```
 
 ## 😇 Is this useful?
 
