@@ -10,9 +10,9 @@ A Flutter plugin for making payments via Payhere Payment Gateway
 
 #  💻Installation
 
-Add  this `dependencies` in your app's `pubspec.yml`
+Add  this `dependencies` in your app's `pubspec.yaml`
 
-    payhere_flutter: ^0.0.7
+    payhere_flutter: ^0.0.8
 
 # 💰 Making Payments
 
@@ -59,22 +59,41 @@ RaisedButton(
 ```
 `PhResponse` is identical to `PHResponse` in Android SDK 
 
+
 `PhResponse`
-| type |name  |description
+| type |name  |description |
 |--|--|--|
-|  `Data`| `data` |includes information about transaction
+|`Data`| `data` |includes information about transaction
 |`String`|`message` | brief about transaction
 |`int` | `status` | Transaction status
 
 ### Status
 |status|code  |
 |--|--|
-| SUCCESS |  1|
+| STATUS_SUCCESS |  1|
 |ERROR_UNKNOWN|-1
 |ERROR_DATA| -2
 |ERROR_VALIDATION| -3
+|ERROR_NETWORK | -4
 |ERROR_PAYMENT | -5
 
+### Data
+|type|name| description|
+|--|--|--|
+|`int`|`status`|payment status
+|`double` | `paymentNo` | unique payment identifier 
+|`String` | `currency` | The unit of currency in which the transaction was made 
+|`price` | `price` | Amount of transaction.
+| `String`|`sign`| transaction sign key
+|`String`| `message` | description about transaction
+
+## Status
+|status| code
+|--|--|
+|INIT|0
+|PAYMENT|1
+|SUCCESS|2
+|FAILED|-2
 
 
 you can find example code in [here](https://github.com/bawantha/payhere_flutter/tree/master/example)

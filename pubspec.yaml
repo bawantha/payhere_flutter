@@ -1,6 +1,6 @@
 name: payhere_flutter
 description: A wrapper around native Payhere SDK , This plugin mimics the original Payhere SDK hence making a payment is identical to original sdk
-version: 0.0.7
+version: 0.0.8
 author: bawantha <bawwa.16@cse.mrt.ac.lk>
 homepage: https://github.com/bawantha/payhere_flutter
 

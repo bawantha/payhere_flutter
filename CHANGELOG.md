@@ -1,3 +1,5 @@
+##0.0.8
+ *update readme.me
 ##0.0.7
  *model updates
  *bug fix
