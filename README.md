@@ -12,7 +12,7 @@ A Flutter plugin for making payments via Payhere Payment Gateway
 
 Add  this `dependencies` in your app's `pubspec.yaml`
 
-    payhere_flutter: ^0.0.8
+    payhere_flutter: ^0.1.0
 
 # 💰 Making Payments
 
@@ -99,6 +99,32 @@ RaisedButton(
 you can find example code in [here](https://github.com/bawantha/payhere_flutter/tree/master/example)
 
 
+# 🚀 Release
+flutter uses **R8** code shrinker by default if you want to use **R8** you need to add `proguard-rules.pro` to  your flutter app. [more](https://developer.android.com/studio/build/shrink-code)
+
+ 1. release with **R8** ( default)
+	  i.  create `proguard-rules.pro`  under `android>app` and add this
+	 
+	    -keep class lk.payhere.** { *; }
+	    
+	  ii.  under `app>build.gradle` add this
+
+```gradle
+buildTypes {  
+  release {  
+  // TODO: Add your own signing config for the release build.  
+  // Signing with the debug keys for now, so `flutter run --release` works.  
+  
+  minifyEnabled true  
+  useProguard true  
+  proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'  
+  signingConfig signingConfigs.debug  
+    }  
+}
+```
+ 2. without  code shrinking
+	 run `flutter build --no-shrink`
+	 
 
 # 📄 Implementation
 

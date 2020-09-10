@@ -1,3 +1,7 @@
+##0.1.0
+ *change readme.md
+ *community testing done
+
 ##0.0.8
  *update readme.me
 ##0.0.7
