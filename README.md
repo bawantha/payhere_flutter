@@ -125,7 +125,7 @@ buildTypes {
 ```
  2. without  code shrinking
  
-	 run `flutter build --no-shrink`
+	 run `flutter build apk --no-shrink`
 	 
 
 # 📄 Implementation
