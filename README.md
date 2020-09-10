@@ -103,6 +103,7 @@ you can find example code in [here](https://github.com/bawantha/payhere_flutter/
 flutter uses **R8** code shrinker by default if you want to use **R8** you need to add `proguard-rules.pro` to  your flutter app. [more](https://developer.android.com/studio/build/shrink-code)
 
  1. release with **R8** ( default)
+ 
 	  i.  create `proguard-rules.pro`  under `android>app` and add this
 	 
 	    -keep class lk.payhere.** { *; }
@@ -123,6 +124,7 @@ buildTypes {
 }
 ```
  2. without  code shrinking
+ 
 	 run `flutter build --no-shrink`
 	 
 
