@@ -12,7 +12,7 @@ A Flutter plugin for making payments via Payhere Payment Gateway
 
 Add  this `dependencies` in your app's `pubspec.yaml`
 
-    payhere_flutter: ^0.1.0
+    payhere_flutter: ^0.1.1
 
 # 💰 Making Payments
 
@@ -146,6 +146,7 @@ The project is open to public contribution. Please feel very free to contribute.
   **Android**
 	 [Manifest merger failed error](https://stackoverflow.com/questions/28095703/manifest-merger-failed-error)	 
 	 add Page maker rule for `AndroidManifest.xml`
+	 
 	 ```
  <application
 	android:name="io.flutter.app.FlutterApplication"  
